@@ -32,7 +32,7 @@ class App < Sinatra::Base
       @num1 + @num2
       binding.pry
     when -
-      "#{@num1}" - "#{@num2}"
+      @num - @num2
     when *
       @num1 * @num2
     # when /
