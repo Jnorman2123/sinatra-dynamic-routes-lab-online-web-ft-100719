@@ -28,15 +28,18 @@ class App < Sinatra::Base
     @num1 = params[:number1].to_i
     @num2 = params[:number2].to_i
     case params[:operation]
-    when +
-      @added_number = @num1 + @num2
-      "#{added_number}"
-    when -
-      @num - @num2
-    when *
-      @num1 * @num2
-    when /
-      @num1 / @num2
+    when "add"
+      @add = @num1 + @num2
+      "#{@add}"
+    when "subtract"
+      @subtract = @num - @num2
+      "#{@subtract}"
+    when "multiply"
+      @multiply = @num1 * @num2
+      "#{@multiply}"
+    when "divide"
+      @divide = @num1 / @num2
+      "#{@divide}"
     end
   end
 end
