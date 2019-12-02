@@ -29,11 +29,11 @@ class App < Sinatra::Base
     when +
       "#{params[:number1]}" + "#{params[:number2]}"
     when -
-      "#{params[:number1]}" + "#{params[:number2]}"
+      "#{params[:number1]}" - "#{params[:number2]}"
     when *
-      "#{params[:number1]}" + "#{params[:number2]}"
+      "#{params[:number1]}" * "#{params[:number2]}"
     when /
-      "#{params[:number1]}" + "#{params[:number2]}"
+      "#{params[:number1]}" / "#{params[:number2]}"
     end
   end
 end
