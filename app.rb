@@ -30,8 +30,9 @@ class App < Sinatra::Base
     case params[:operation]
     when +
       "#{@num1}" + "#{@num2}"
+      binding.pry
     when -
-      @num1 - @num2
+      "#{@num1}" - "#{@num2}"
     when *
       @num1 * @num2
     # when /
