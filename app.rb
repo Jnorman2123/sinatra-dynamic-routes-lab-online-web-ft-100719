@@ -33,7 +33,7 @@ class App < Sinatra::Base
       "#{@add}"
     when "subtract"
       binding.pry
-      @subtract = @num - @num2
+      @subtract = @num1 - @num2
       "#{@subtract}"
     when "multiply"
       @multiply = @num1 * @num2
