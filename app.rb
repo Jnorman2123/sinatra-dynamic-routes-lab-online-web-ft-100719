@@ -29,13 +29,13 @@ class App < Sinatra::Base
     @num2 = params[:number2].to_i
     case params[:operation]
     when +
-      "#{params[:number1]}.to_i" + "#{params[:number2]}.to_i"
+      @num1 + @num2
     when -
-      "#{params[:number1]}" - "#{params[:number2]}"
+      @num1 - @num2
     when *
-      "#{params[:number1]}" * "#{params[:number2]}"
-    # when /
-    #   "#{params[:number1]}" / "#{params[:number2]}"
+      @num1 * @num2
+    when /
+      @num1 / @num2
     end
   end
 end
